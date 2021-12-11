@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play_navigation"
+    android:label="@string/choose_region"
+    app:startDestination="@id/chooseRegionFragment">
+
+    <fragment
+        android:id="@+id/chooseRegionFragment"
+        android:name="edu.sjsu.android.countriescapitalsquiz.ui.main.ChooseRegionFragment"
+        android:label="fragment_choose_region"
+        tools:layout="@layout/fragment_choose_region">
+        <action
+            android:id="@+id/action_chooseRegionFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="edu.sjsu.android.countriescapitalsquiz.ui.main.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_chooseRegionFragment"
+            app:destination="@id/chooseRegionFragment" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="continent"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="edu.sjsu.android.countriescapitalsquiz.ui.main.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/action_questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_questionFragment_to_chooseRegionFragment"
+            app:destination="@id/chooseRegionFragment" />
+        <argument
+            android:name="continent"
+            app:argType="string" />
+    </fragment>
+</navigation>
