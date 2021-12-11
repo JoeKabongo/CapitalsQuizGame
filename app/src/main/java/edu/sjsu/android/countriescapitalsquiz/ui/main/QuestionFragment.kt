@@ -16,7 +16,7 @@ import edu.sjsu.android.countriescapitalsquiz.model.Question
  * Question Fragment display question and manage user interaction
  */
 class QuestionFragment : Fragment() {
-    private var questions: List<Question> = DataSource().loadQuestions()
+    private lateinit var questions: List<Question>
     private var questionNumber = 1
     private var correctAnswers = 0
     private var questionAnswered = false
@@ -35,6 +35,9 @@ class QuestionFragment : Fragment() {
             continent = it.getString("continent", ChooseRegionFragment.AFRICA)
         }
 
+        // Load list of questions
+        loadQuestions()
+
         // Inflate the layout for this fragment
         _binding = FragmentQuestionBinding.inflate(inflater, container, false)
         return binding.root
@@ -43,6 +46,18 @@ class QuestionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupUI()
         setQuestion()
+    }
+
+    /* Load the list of the questions based on the continent */
+    private fun loadQuestions() {
+        questions =
+            when (continent) {
+                ChooseRegionFragment.AFRICA -> DataSource().loadAfricaQuestions()
+                ChooseRegionFragment.AMERICA -> DataSource().loadAmericaQuestions()
+                ChooseRegionFragment.ASIA -> DataSource().loadAsiaQuestions()
+                ChooseRegionFragment.EUROPE -> DataSource().loadEuropeQuestions()
+                else -> DataSource().loadOceaniaQuestions()
+            }
     }
 
 
@@ -78,7 +93,7 @@ class QuestionFragment : Fragment() {
     /* Get current question and update the UI to show that question*/
     private fun setQuestion() {
         val currentQuestion = questions[questionNumber - 1]
-        binding.question.text = currentQuestion.question
+        binding.question.text = resources.getString(R.string.question, currentQuestion.country)
         binding.optionOne.text = currentQuestion.optionOne
         binding.optionTwo.text = currentQuestion.optionTwo
         binding.optionThree.text = currentQuestion.optionThree

@@ -16,4 +16,5 @@
     <string name="capital">Capital</string>
     <string name="exit">Exit</string>
     <string name="score_result">You scored %1d out of 10</string>
+    <string name="question"> What is the capital of %1s?</string>
 </resources>
