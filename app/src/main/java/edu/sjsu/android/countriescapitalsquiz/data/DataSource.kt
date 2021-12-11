@@ -71,16 +71,32 @@ class DataSource {
     /* Return list of 10 questions for Asia */
     fun loadAsiaQuestions(): List<Question> {
         return listOf(
-            Question(1, "Congo", "Kinshasa", "Lisbon", "Paris", "DC", 1),
-            Question(2, "France", "Paris", "Lisbon", "NYC", "DC", 1),
-            Question(3, "Portugal", "San Jose", "Lisbon", "Paris", "DC", 2),
-            Question(4, "USA", "Kin", "NYC", "San Jose", "DC", 4),
-            Question(5, "Canada", "Kin", "OTTAWA", "Paris", "DC", 2),
-            Question(6, "Brazil", "Kin", "Brasília", "Paris", "DC", 2),
-            Question(7, "Japan", "Tokyo", "Lisbon", "Paris", "DC", 1),
+            Question(1, "Vietnam", "Hanoi", "Mexico City", "Port Moresby", "Banjul", 1),
+            Question(2, "Malaysia", "Helsinki", "Lilongwe", "Caracas", "Kuala Lumpur", 4),
+            Question(
+                3,
+                "United Arab Emirates",
+                "Guatemala City",
+                "Abu Dhabi",
+                "Tashkent",
+                "Yamoussoukro",
+                2
+            ),
+            Question(
+                4,
+                "Brunei",
+                "Ljubljana",
+                "Bamako",
+                "Bandar Seri Begawan",
+                "Saint George's",
+                3
+            ),
+            Question(5, "Turkey", "Ankara", "Kin", "Helsinki", "Ouagadougou", 1),
+            Question(6, "Tajikistan", "Montevideo", "Maseru", "Baghdad", "Dushanbe", 4),
+            Question(7, "Japan", "Tokyo", "Lisbon", "Paris", "Manama", 1),
             Question(8, "China", "Beijing", "NYC", "Paris", "DC", 1),
-            Question(9, "India", "Kin", "New Delhi", "Mumbai", "DC", 2),
-            Question(10, "Ghana", "Kin", "Accra", "Lumbubashi", "DC", 2),
+            Question(9, "India", "Abu Dhabi", "New Delhi", "Mumbai", "DC", 2),
+            Question(10, "Bangladesh", "Manama", "Dhaka", "Lumbubashi", "Monaco", 2),
         )
     }
 
@@ -88,16 +104,16 @@ class DataSource {
     /* Return list of 10 questions for Europe*/
     fun loadEuropeQuestions(): List<Question> {
         return listOf(
-            Question(1, "Congo", "Kinshasa", "Lisbon", "Paris", "DC", 1),
+            Question(1, "Slovenia", "Nicosia", "Beirut", "San Marino", "Ljubljana", 4),
             Question(2, "France", "Paris", "Lisbon", "NYC", "DC", 1),
-            Question(3, "Portugal", "San Jose", "Lisbon", "Paris", "DC", 2),
-            Question(4, "USA", "Kin", "NYC", "San Jose", "DC", 4),
-            Question(5, "Canada", "Kin", "OTTAWA", "Paris", "DC", 2),
-            Question(6, "Brazil", "Kin", "Brasília", "Paris", "DC", 2),
-            Question(7, "Japan", "Tokyo", "Lisbon", "Paris", "DC", 1),
-            Question(8, "China", "Beijing", "NYC", "Paris", "DC", 1),
-            Question(9, "India", "Kin", "New Delhi", "Mumbai", "DC", 2),
-            Question(10, "Ghana", "Kin", "Accra", "Lumbubashi", "DC", 2),
+            Question(3, "Portugal", "San Jose", "Lisbon", "Paris", "Doha", 2),
+            Question(4, "Lithuania", "Doha", "Vilnius", "Saint George's", "Islamabad", 2),
+            Question(5, "Romania", "Yaounde", "Kyiv", "Manama", "Bucharest", 4),
+            Question(6, "Estonia", "Dushanbe", "Monrovia", "Tallinn", "Lomé", 3),
+            Question(7, "Russia", "Moscow", "Baghdad", "Reykjavik", "Kingston", 1),
+            Question(8, "Poland", "Djibouti", "Sanaa", "Warsaw", "Amsterdam", 3),
+            Question(9, "Ukraine", "Damascus", "New Delhi", "Kyiv", "DC", 3),
+            Question(10, "Sweden", "Kin", "Accra", "Stockholm", "Port-au-Prince", 3),
         )
     }
 
@@ -105,16 +121,32 @@ class DataSource {
     /* Return list of 10 questions for Oceania */
     fun loadOceaniaQuestions(): List<Question> {
         return listOf(
-            Question(1, "Congo", "Kinshasa", "Lisbon", "Paris", "DC", 1),
-            Question(2, "France", "Paris", "Lisbon", "NYC", "DC", 1),
-            Question(3, "Portugal", "San Jose", "Lisbon", "Paris", "DC", 2),
-            Question(4, "USA", "Kin", "NYC", "San Jose", "DC", 4),
-            Question(5, "Canada", "Kin", "OTTAWA", "Paris", "DC", 2),
-            Question(6, "Brazil", "Kin", "Brasília", "Paris", "DC", 2),
-            Question(7, "Japan", "Tokyo", "Lisbon", "Paris", "DC", 1),
-            Question(8, "China", "Beijing", "NYC", "Paris", "DC", 1),
-            Question(9, "India", "Kin", "New Delhi", "Mumbai", "DC", 2),
-            Question(10, "Ghana", "Kin", "Accra", "Lumbubashi", "DC", 2),
+            Question(1, "Vanuatu", "Kinshasa", "Port-Vila", "Santa Domingo", "Algiers", 2),
+            Question(2, "Tonga", "Nukuʿalofa", "Skopje", "Oslo", "N'Djamena", 1),
+            Question(
+                3,
+                "Kiribati",
+                "Yamoussoukro",
+                "Tallinn",
+                "Bairiki, Ambo, and Betio",
+                "Asmara",
+                3
+            ),
+            Question(
+                4,
+                "Palau",
+                "Ngerulmud capitol complex in Melekeok on Babelthuap",
+                "Tehrān",
+                "Bangkok",
+                "Moroni",
+                1
+            ),
+            Question(5, "Fiji", "Reykjavík", "Bratislava", "Suva", "Asunción", 3),
+            Question(6, "Solomon Islands", "San José", "Honiara", "Jakarta", "Majuro", 2),
+            Question(7, "Papua New Guinea", "Warsaw", "Guatemala City", "Port Moresby", "Hanoi", 3),
+            Question(8, "Samoa", "Apia", "London", "San Salvador", "Tripoli", 1),
+            Question(9, "Nauru", "Brasilia", "Yaren district", "Dushanbe", "Brazzaville", 2),
+            Question(10, "Micronesia", "Brussels", "Palikir", "Male", "Lima", 2),
         )
     }
 

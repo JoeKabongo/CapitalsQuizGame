@@ -41,7 +41,6 @@
 
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,17 +118,14 @@
             android:textSize="18sp"
             tools:text="apple" />
 
-
         <TextView
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:gravity="center"
-            android:text="what is the capital of"
             android:textColor="#363A43"
             android:textSize="22sp" />
-
 
     </LinearLayout>
 
